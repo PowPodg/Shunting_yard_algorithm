@@ -14,7 +14,7 @@ class ShuntingYard
 public:
 	vector<string> Parsing_String(string_view);
 	queue<string> Infix_to_Postfix(string_view);
-	double Ñalcul_Postfix(queue<string>&);
+	double Calcul_Postfix(queue<string>&);
 	double Calculation(string_view);
 private:
 	int Get_Priority(string_view);

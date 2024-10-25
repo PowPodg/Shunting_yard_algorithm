@@ -127,7 +127,7 @@ queue<string> ShuntingYard::Infix_to_Postfix(string_view in)
 	return queue_result;
 }
 //-------------------------------------------------
-double ShuntingYard::Ñalcul_Postfix(queue<string>& qu)
+double ShuntingYard::Calcul_Postfix(queue<string>& qu)
 {
 	stack <double> result;
 	while (!qu.empty())
@@ -157,7 +157,7 @@ double ShuntingYard::Ñalcul_Postfix(queue<string>& qu)
 double ShuntingYard::Calculation(string_view in)
 {
 	auto queue_result = Infix_to_Postfix(in);
-	return Ñalcul_Postfix(queue_result);
+	return Calcul_Postfix(queue_result);
 }
 //-----------------------------
 int ShuntingYard::Get_Priority(string_view tk)
