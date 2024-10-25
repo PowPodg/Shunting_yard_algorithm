@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	//1 var
-	string input1 = "(24.5+4)*(3.55-1.23)+2.89/1.44";// = 68.127;
+	string input1 = "(24.5+ 4)*(3.55-1.23)+ 2.89/ 1.44";// = 68.127;
 	ShuntingYard sh1;
 	auto res1 = sh1.Calculation(input1);
 
