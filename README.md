@@ -2,7 +2,7 @@
 
 Shunting yard algorithm - is a method for parsing arithmetical expressions, specified in infix notation.
 
-Conversion of infix expression to postfix expression is implemented.
+Conversion of infix expression to postfix expression is implemented - `Infix_to_Postfix(string_view)`.
 
 Two C++ 17 implementations of the algorithm are shown here.<br />
 
