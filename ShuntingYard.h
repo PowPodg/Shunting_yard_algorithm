@@ -58,7 +58,7 @@ private:
 					if (value == "*" || value == "/") return 2;
 					else return 1;
 				}()
-					), math_op(value) {}
+			), math_op(value) {}
 
 				const int priority;
 				double Calculation() override;					
