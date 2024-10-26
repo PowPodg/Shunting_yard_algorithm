@@ -12,7 +12,7 @@ $${\color{green} 1 var  }$$<br />
 `ShuntingYard sh1;`<br />
 `auto res1 = sh1.Calculation(input1);`<br />
 
-$${\color{green}2 var - without &ensp; the &ensp; brackets!!!!!! }$$<br />
+$${\color{green}2 var - without &ensp; brackets &ensp; and &ensp; validation &ensp; checks !!!!!! }$$<br />
 `string input2 = "25.2 + 36.5 * 21 - 43 ";` $${\color{green} = 748.7}$$<br />
 `ShuntingYard_2 sh2;`<br />
 `auto res2 = sh2.Calculation(input2);`
