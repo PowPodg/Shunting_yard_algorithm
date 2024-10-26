@@ -16,6 +16,8 @@ int main()
 	auto res2 = sh2.Calculation(input2);
     cout << "RESULT_1 : "<< fixed<<setprecision(3)<<res1<<endl;
 	cout << "RESULT_2 : "<< fixed<< setprecision(3)<<res2<<endl;
+	cin.get();
+	return 0;
 }
 
 

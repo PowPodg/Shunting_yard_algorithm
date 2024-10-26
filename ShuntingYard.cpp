@@ -93,7 +93,6 @@ queue<string> ShuntingYard::Infix_to_Postfix(string_view in)
 		  else {
 			 queue_result.emplace(it);
 			}
-
 		}
 	};
 
