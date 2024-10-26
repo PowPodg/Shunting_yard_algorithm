@@ -61,29 +61,7 @@ private:
 					), math_op(value) {}
 
 				const int priority;
-				double Calculation() override {
-					if (math_op == "*") {
-						auto res = _left->Calculation() * _right->Calculation();
-						return res;
-					}
-					else if (math_op == "/") {
-						auto res1 = _left->Calculation();
-						auto res2 = _right->Calculation();
-						auto res = res1 / res2;
-						return res;
-					}
-					else if (math_op == "+") {
-						auto res1 = _left->Calculation();
-						auto res2 = _right->Calculation();
-						auto res = res1 + res2;
-						return res;
-					}
-					else if (math_op == "-") {
-						auto res = _left->Calculation() - _right->Calculation();
-						return res;
-					}
-					return 0;
-				}
+				double Calculation() override;					
 				void SetLeft(shared_ptr<ICalc> calc) { _left = calc; }
 				void SetRight(shared_ptr<ICalc> calc) { _right = calc; }
 	private:

@@ -278,3 +278,28 @@ double ShuntingYard_2::Calculation(string_view in)
 	auto res2 = Preparation(res1);
 	return res2->Calculation();
 }
+//-------------------------------
+double ShuntingYard_2::MathOperation::Calculation()
+{
+	if (math_op == "*") {
+		auto res = _left->Calculation() * _right->Calculation();
+		return res;
+	}
+	else if (math_op == "/") {
+		auto res1 = _left->Calculation();
+		auto res2 = _right->Calculation();
+		auto res = res1 / res2;
+		return res;
+	}
+	else if (math_op == "+") {
+		auto res1 = _left->Calculation();
+		auto res2 = _right->Calculation();
+		auto res = res1 + res2;
+		return res;
+	}
+	else if (math_op == "-") {
+		auto res = _left->Calculation() - _right->Calculation();
+		return res;
+	}
+	return 0;
+}
