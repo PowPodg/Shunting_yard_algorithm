@@ -115,8 +115,9 @@ queue<string> ShuntingYard::Infix_to_Postfix(string_view in)
 				{
 					queue_result.emplace(stack_temp.top());
 					stack_temp.pop();
+					if (stack_temp.empty()) break;
 				}
-				stack_temp.pop();
+				if (!stack_temp.empty()) stack_temp.pop();
 			}
 			else {
 				posf(v_i);
@@ -277,29 +278,4 @@ double ShuntingYard_2::Calculation(string_view in)
 	auto res1 = Parsing_String(in);
 	auto res2 = Preparation(res1);
 	return res2->Calculation();
-}
-//-------------------------------
-double ShuntingYard_2::MathOperation::Calculation()
-{
-	if (math_op == "*") {
-		auto res = _left->Calculation() * _right->Calculation();
-		return res;
-	}
-	else if (math_op == "/") {
-		auto res1 = _left->Calculation();
-		auto res2 = _right->Calculation();
-		auto res = res1 / res2;
-		return res;
-	}
-	else if (math_op == "+") {
-		auto res1 = _left->Calculation();
-		auto res2 = _right->Calculation();
-		auto res = res1 + res2;
-		return res;
-	}
-	else if (math_op == "-") {
-		auto res = _left->Calculation() - _right->Calculation();
-		return res;
-	}
-	return 0;
 }
